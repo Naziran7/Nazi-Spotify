@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Support Me</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #111;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .container {
+        max-width: 1000px;
+        width: 90%;
+        background: #000;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .container img {
+        width: 40%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .content {
+        width: 60%;
+      }
+
+      .content h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+
+      .content p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+      }
+
+      .content a {
+        color: #ff4d4d;
+        text-decoration: none;
+        display: block;
+        margin-top: 6px;
+      }
+
+      .content a:hover {
+        text-decoration: underline;
+      }
+
+      /* Mobile */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .container img,
+        .content {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="./backgrd.jpg" alt="Profile Image" />
+
+      <div class="content">
+        <h1>I'm Anish Naziran</h1>
+
+        <p>
+          I’m currently upskilling in
+          <strong>HTML, CSS, and JavaScript</strong>, focusing on building
+          strong front-end fundamentals. I’ve developed a clone web page as part
+          of my hands-on learning and enjoy turning ideas into functional, clean
+          user interfaces.
+        </p>
+
+        <a href="https://github.com/Naziran7" target="_blank">
+          🔗 GitHub: naziran7
+        </a>
+        <a href="www.linkedin.com/in/naziran7" target="_blank">
+          🔗 LinkedIn: naziran7
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
