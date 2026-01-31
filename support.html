@@ -2,7 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Support Me</title>
+
     <style>
       * {
         margin: 0;
@@ -12,17 +14,58 @@
 
       body {
         min-height: 100vh;
+        background: #111;
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      nav {
+        background: #000;
+        font-family: "Ubuntu", sans-serif;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        height: 65px;
+        padding: 0 20px;
+      }
+
+      nav ul li {
+        padding: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      nav ul li a:hover {
+        color: #ff4d4d;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+
+      .brand img {
+        width: 50px;
+        margin-right: 8px;
+      }
+
+      .page-center {
+        min-height: calc(100vh - 65px);
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #111;
-        color: white;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
       }
-
       .container {
         max-width: 1000px;
-        width: 90%;
+        width: 100%;
         background: #000;
         border-radius: 12px;
         box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
@@ -63,7 +106,6 @@
         text-decoration: underline;
       }
 
-      /* Mobile */
       @media (max-width: 768px) {
         .container {
           flex-direction: column;
@@ -79,26 +121,38 @@
   </head>
 
   <body>
-    <div class="container">
-      <img src="./backgrd.jpg" alt="Profile Image" />
+    <nav>
+      <ul>
+        <li class="brand">
+          <img src="./logo.png" alt="Spotify Logo" />
+          Spotify
+        </li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./support.html">Support</a></li>
+      </ul>
+    </nav>
+    <div class="page-center">
+      <div class="container">
+        <img src="./backgrd.jpg" alt="Profile Image" />
 
-      <div class="content">
-        <h1>I'm Anish Naziran</h1>
+        <div class="content">
+          <h1>Spotify Clone – My Own Version</h1>
 
-        <p>
-          I’m currently upskilling in
-          <strong>HTML, CSS, and JavaScript</strong>, focusing on building
-          strong front-end fundamentals. I’ve developed a clone web page as part
-          of my hands-on learning and enjoy turning ideas into functional, clean
-          user interfaces.
-        </p>
+          <p>
+            I’m currently upskilling in
+            <strong>HTML, CSS, and JavaScript</strong>, focusing on building
+            strong front-end fundamentals. I enjoy turning ideas into
+            functional, clean user interfaces through hands-on projects.
+          </p>
 
-        <a href="https://github.com/Naziran7" target="_blank">
-          🔗 GitHub: naziran7
-        </a>
-        <a href="www.linkedin.com/in/naziran7" target="_blank">
-          🔗 LinkedIn: naziran7
-        </a>
+          <a href="https://github.com/Naziran7" target="_blank">
+            🔗 GitHub: naziran7
+          </a>
+          <a href="https://www.linkedin.com/in/naziran7" target="_blank">
+            🔗 LinkedIn: naziran7
+          </a>
+        </div>
       </div>
     </div>
   </body>

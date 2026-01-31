@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support Me</title>
+
     <style>
+      /* ===== RESET ===== */
       * {
         margin: 0;
         padding: 0;
@@ -11,48 +14,154 @@
       }
 
       body {
-        height: 100vh;
+        min-height: 100vh;
+        background: #111;
+        color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      /* ===== NAVBAR ===== */
+      nav {
+        background: #000;
+      }
+
+      nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        height: 65px;
+        padding: 0 20px;
+      }
+
+      nav ul li {
+        padding: 0 15px;
+        cursor: pointer;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      nav ul li a:hover {
+        color: #ff4d4d;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+      }
+
+      .brand img {
+        width: 50px;
+        margin-right: 8px;
+      }
+
+      /* ===== CENTER LAYOUT ===== */
+      .page-center {
+        min-height: calc(100vh - 65px);
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #111;
-        color: white;
+        padding: 20px;
       }
 
-      .container,
-      h1 {
-        width: 1000px; /* adjust as needed */
-        padding: 10px;
+      /* ===== CARD ===== */
+      .container {
+        max-width: 1000px;
+        width: 100%;
         background: #000;
         border-radius: 12px;
         box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
         display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-      }
-      h1 {
-        font-size: 2.5rem;
-        text-align: right;
-        line-height: 1.5;
-        align-items: center;
+        gap: 20px;
+        padding: 20px;
       }
 
       .container img {
-        max-width: 100%;
-        height: auto;
+        width: 40%;
         border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .content {
+        width: 60%;
+      }
+
+      .content h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+      }
+
+      .content p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+      }
+
+      .content a {
+        color: #ff4d4d;
+        text-decoration: none;
+        display: block;
+        margin-top: 6px;
+      }
+
+      .content a:hover {
+        text-decoration: underline;
+      }
+
+      /* ===== MOBILE ===== */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .container img,
+        .content {
+          width: 100%;
+        }
       }
     </style>
   </head>
+
   <body>
-    <div class="container">
-      <img src="./backgrd.jpg" alt="Centered Image" />
-      <h1>
-        Hey Guys! <br />
-        Spotify @ 2025 <br />
-        Created by Anish Naziran
-      </h1>
+    <!-- NAVBAR -->
+    <nav>
+      <ul>
+        <li class="brand">
+          <img src="./logo.png" alt="Spotify Logo" />
+          Spotify
+        </li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./support.html">Support</a></li>
+      </ul>
+    </nav>
+
+    <!-- CENTER CONTENT -->
+    <div class="page-center">
+      <div class="container">
+        <img src="./backgrd.jpg" alt="Profile Image" />
+
+        <div class="content">
+          <p>
+            <br />
+            <strong>Created by Anish Naziran</strong><br />
+            I’ve developed this clone as part of my hands-on learning journey,
+            focusing on clean UI and functional design.
+          </p>
+
+          <a href="https://github.com/Naziran7" target="_blank">
+            🔗 GitHub: naziran7
+          </a>
+          <a href="https://www.linkedin.com/in/naziran7" target="_blank">
+            🔗 LinkedIn: naziran7
+          </a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
